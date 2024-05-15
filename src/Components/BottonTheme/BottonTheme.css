@@ -1,0 +1,12 @@
+.btn-mode button {
+    padding: 0.55rem 1rem;
+    border: none;
+    font-size: 1.33rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background: linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%) !important;
+    border-radius: 10px;
+    color: #fff;
+}

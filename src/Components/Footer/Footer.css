@@ -1,0 +1,28 @@
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    padding: 0.55rem 2rem;
+}
+
+
+
+
+
+
+/*  */
+
+/*------ media query -------- */
+
+@media (max-width:600px) {
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footer p {
+        margin: 1rem auto;
+    }
+}

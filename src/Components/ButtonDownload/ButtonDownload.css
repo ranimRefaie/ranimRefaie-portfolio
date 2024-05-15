@@ -1,0 +1,24 @@
+.btn-cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1.5px solid #15B9B9;
+    background: linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 0.6rem;
+}
+
+
+.btn-cv .icon {
+    margin-right: 0.3rem;
+}
+
+.btn-cv:hover {
+    color: #15B9B9;
+    background: transparent;
+}

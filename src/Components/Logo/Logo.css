@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.22rem;
+    cursor: pointer;
+}
+
+.logo h2 {
+    font-family: "Tauri", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.logo h2 .icon-logo {
+    font-size: 3rem;
+    color: #f093b6;
+}
