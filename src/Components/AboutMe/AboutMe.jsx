@@ -13,14 +13,14 @@ const AboutMe = () => {
     duration: 750,
   });
   return (
-    <div data-aos="fade-up" id="about" className="about-container">
+    <div id="about" className="about-container">
       <TitleSection title="About Me" />
       <div className="content-about">
-        <div className="left-about">
+        <div data-aos="flip-up" className="left-about">
           <img src={about_1} alt="" />
         </div>
-        <div data-aos="zoom-in-up" className="right-about">
-          <p>
+        <div className="right-about">
+          <p data-aos="fade-up">
             I am a frontend web developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with HTML, CSS, JavaScript, React and Git. I am a quick

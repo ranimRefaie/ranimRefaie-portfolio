@@ -2,7 +2,7 @@ import "./ButtonHire.css";
 
 const ButtonHire = () => {
   return (
-    <a href="#content" className="btn-here">
+    <a href="#contact" className="btn-here">
       Hire Me
     </a>
   );

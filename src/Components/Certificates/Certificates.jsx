@@ -50,6 +50,7 @@ const Certificates = () => {
   ];
   return (
     <div
+      id="certificates"
       className="cards-certificates"
       style={{
         width: "85%",

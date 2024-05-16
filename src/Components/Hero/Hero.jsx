@@ -25,6 +25,7 @@ const Hero = () => {
   });
   return (
     <section
+      id="home"
       className={isDark ? "hero-container dark" : "hero-container light"}
     >
       <div data-aos="fade-right" className="hero-content">
@@ -33,7 +34,8 @@ const Hero = () => {
           <span>{typeEffect}</span>
         </h2>
         <p>
-          Elevating user experiences through responsive frontend development
+          I'm a front-end developer with 2 years of experience using React.
+          Reach out if you'd like to learn more!
         </p>
 
         <SocialMediaIcons />

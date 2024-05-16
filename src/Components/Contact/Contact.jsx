@@ -14,7 +14,7 @@ const Contact = () => {
     duration: 750,
   });
   return (
-    <section id="content" className="content-container">
+    <section id="contact" className="content-container">
       <TitleSection title="Contact Me" />
 
       <div className="contact-content">

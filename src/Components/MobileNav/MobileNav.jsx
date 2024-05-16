@@ -5,7 +5,6 @@ import { useContext } from "react";
 import DataNav from "../../Data/DataNav";
 import ButtonHire from "../ButtonHire/ButtonHire";
 import Logo from "../Logo/Logo";
-import { Link } from "react-scroll";
 
 const MobileNav = ({ isOpen, toggleMenu }) => {
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
@@ -28,19 +27,14 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
             <ul>
               {DataNav.map((item) => (
                 <li key={item.id}>
-                  <Link
+                  <a
                     style={{
                       color: theme.color,
                     }}
-                    activeClass="active"
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={item.offset}
-                    duration={500}
+                    href={item.to}
                   >
                     {item.item}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

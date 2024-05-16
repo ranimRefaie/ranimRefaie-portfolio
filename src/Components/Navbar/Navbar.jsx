@@ -7,7 +7,6 @@ import BottonTheme from "../BottonTheme/BottonTheme";
 import { ThemeContext } from "../../Contexts/Themes";
 import Logo from "../Logo/Logo";
 import DataNav from "../../Data/DataNav";
-import { Link } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -37,19 +36,14 @@ const Navbar = () => {
           >
             {DataNav.map((item) => (
               <li key={item.id}>
-                <Link
+                <a
                   style={{
                     color: theme.color,
                   }}
-                  activeClass="active"
-                  to="about"
-                  spy={true}
-                  smooth={true}
-                  offset={item.offset}
-                  duration={500}
+                  href={item.to}
                 >
                   {item.item}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
