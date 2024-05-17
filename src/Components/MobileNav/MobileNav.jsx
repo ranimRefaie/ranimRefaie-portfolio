@@ -33,6 +33,7 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
                     }}
                     href={item.to}
                   >
+                    <span> {item.icon}</span>
                     {item.item}
                   </a>
                 </li>
