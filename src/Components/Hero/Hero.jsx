@@ -34,8 +34,8 @@ const Hero = () => {
           <span>{typeEffect}</span>
         </h2>
         <p>
-          I'm a front-end developer with 2 years of experience using React.
-          Reach out if you'd like to learn more!
+          I'm a front-end developer passionate about creating interactive and
+          experiences on the web. Contact me if you'd like to learn more!
         </p>
 
         <SocialMediaIcons />

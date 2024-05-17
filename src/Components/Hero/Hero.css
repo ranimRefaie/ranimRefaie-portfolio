@@ -1,9 +1,11 @@
 .hero-container {
+    height: 70vh;
     width: 80%;
     display: flex;
     position: relative;
-    margin: 3rem auto;
+    margin: 5rem auto;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -69,12 +71,21 @@
     }
 }
 
+@media (max-width:1325px) {
+    .hero-container {
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 4rem auto;
+    }
+}
+
 @media (max-width:992px) {
     .hero-container {
         height: auto;
         flex-direction: column-reverse;
         align-items: center;
-        margin: 1rem auto;
+        margin: 4rem auto;
     }
 
     .hero-content {

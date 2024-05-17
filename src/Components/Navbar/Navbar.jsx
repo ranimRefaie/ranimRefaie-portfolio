@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import "./Navbar.css";
 import { FiAlignJustify } from "react-icons/fi";
 import MobileNav from "../MobileNav/MobileNav";
@@ -11,9 +11,23 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
   const [{ theme }] = useContext(ThemeContext);
   const [openMenu, setOpenMenu] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
@@ -26,14 +40,15 @@ const Navbar = () => {
   return (
     <div data-aos="fade-down">
       <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
-      <div className="nav-wrapper">
+      <div
+        style={{
+          backgroundColor: theme.backgroundColor,
+        }}
+        className={scrolled ? "nav-wrapper scrolled" : "nav-wrapper"}
+      >
         <div className="nav-content">
           <Logo />
-          <ul
-            style={{
-              backgroundColor: theme.backgroundColor,
-            }}
-          >
+          <ul>
             {DataNav.map((item) => (
               <li key={item.id}>
                 <a
