@@ -41,6 +41,10 @@
     opacity: 1 !important;
 }
 
+.slick-dots {
+    display: none !important;
+}
+
 @media (max-width:950px) {
     .cards-certificates .card {
         flex-direction: column !important;

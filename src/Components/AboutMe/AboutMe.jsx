@@ -34,7 +34,7 @@ const AboutMe = () => {
           >
             <ButtonDownload
               text="Download CV"
-              link="https://ranimrefaie.github.io/ranimRefaie-portfolio/ranim_alrefaie.pdf"
+              link="https://drive.google.com/file/d/1A1NjtZ8UStMYeRQXK0cKNputb0JPfZJy/view?usp=drivesdk"
               name="RanimAlrefaie.pdf"
             />
             <ButtonHire />
