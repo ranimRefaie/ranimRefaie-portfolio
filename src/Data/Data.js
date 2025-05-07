@@ -1,9 +1,10 @@
 import pro_1 from "../assets/B-World.png";
 import pro_2 from "../assets/Best-Food.png";
 import pro_3 from "../assets/Edusity.png";
-import pro_4 from "../assets/Educational-Platform.png";
+ import pro_4 from "../assets/Educational-Platfor.png";
 import pro_5 from "../assets/Travel.png";
 import pro_6 from '../assets/Learner.png'
+import pro_7 from '../assets/movies.jpeg'
 
 const Data = [
     {
@@ -30,13 +31,21 @@ const Data = [
         demo: 'https://ranimrefaie.github.io/Edusity/',
         git: 'https://github.com/ranimRefaie/Edusity',
     },
+    // {
+    //     id: 4,
+    //     img: pro_4,
+    //     title: 'Educational Platform',
+    //     desc: 'Responsive website, using only html and css',
+    //     demo: 'https://ranimrefaie.github.io/Task3_2/',
+    //     git: 'https://github.com/ranimRefaie/Task3_2',
+    // },
     {
         id: 4,
-        img: pro_4,
-        title: 'Educational Platform',
-        desc: 'Responsive website, using only html and css',
-        demo: 'https://ranimrefaie.github.io/Task3_2/',
-        git: 'https://github.com/ranimRefaie/Task3_2',
+        img: pro_7,
+        title: 'Movies App',
+        desc: 'A movie browsing app built with Next.js, TypeScript and Tailwind CSS, using the TMDB API to display and search for movies.',
+        demo: 'https://movies-smoky-psi.vercel.app/',
+        git: 'https://github.com/ranimRefaie/movies',
     },
     {
         id: 5,
