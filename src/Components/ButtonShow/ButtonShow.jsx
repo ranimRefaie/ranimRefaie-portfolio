@@ -2,10 +2,10 @@ import "./ButtonShow.css";
 import { motion } from "framer-motion";
 import { LuArrowUpRightFromCircle } from "react-icons/lu";
 
-const ButtonShow = () => {
+const ButtonShow = ({link, title}) => {
   return (
-    <motion.a href="#projects" className="btn-cv" whileInView={{ scale: 1.1 }}>
-      Previous Projects
+    <motion.a href={link} className="btn-cv" whileInView={{ scale: 1.1 }}>
+      {title}
       <LuArrowUpRightFromCircle className="icon" />
     </motion.a>
   );

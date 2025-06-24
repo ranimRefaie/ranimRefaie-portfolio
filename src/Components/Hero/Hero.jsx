@@ -45,7 +45,7 @@ const Hero = () => {
           className="buttons-hero"
           style={{ display: "flex", gap: "2rem" }}
         >
-          <ButtonShow />
+          <ButtonShow title='Previous Projects' link='#projects'/>
           <ButtonHire />
         </div>
       </div>

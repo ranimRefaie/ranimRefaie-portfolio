@@ -17,7 +17,7 @@ const DataNav = [
   {
     id: 4,
     item: "Projects",
-    to: "/projects",
+    to: "#projects",
     icon: <GrProjects className="icon" />,
   },
   {

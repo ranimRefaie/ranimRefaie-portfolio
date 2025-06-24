@@ -23,7 +23,7 @@ export const Home = () => {
         <Hero id="" />
         <AboutMe />
         <Skills />
-        <Projects/>
+        <Projects showAll={false}/>
         <Certificates />
         <Contact />
       </div>
