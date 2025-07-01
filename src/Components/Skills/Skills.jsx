@@ -1,76 +1,72 @@
 import "./Skills.css";
 import TitleSection from "../TitleSection/TitleSection";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
-import html from "../../assets/html.svg";
-import css from "../../assets/css-3.svg";
-import js from "../../assets/js.svg";
-import bootstrap from "../../assets/bootstrap.svg";
-import tailwind from "../../assets/tailwind.svg";
-import react from "../../assets/react.svg";
+const tabs = [
+  { id: "frontend", label: "🖥️ Front-End" },
+  { id: "ui", label: "🎨 UI & Styling" },
+  { id: "tools", label: "🛠️ Tools" },
+  { id: "other", label: "🧠 Other" },
+];
+
+const skillsData = {
+  frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Next.js", "TypeScript"],
+  ui: ["Tailwind CSS", "Bootstrap", "CSS Modules"],
+  tools: ["Git", "GitHub", "GitLab", "VS Code", "Figma"],
+  other: ["Responsive Design", "API Integration", "Context API / Zustand", "React Hooks"],
+};
 
 const Skills = () => {
-  AOS.init({
-    easing: "ease-out-sine",
-    delay: 0,
-    duration: 500,
-  });
+  const [activeTab, setActiveTab] = useState("frontend");
+  const getIcon = (label) => label.match(/^[^\w\s]+/)[0]; // جلب الإيموجي
+const getText = (label) => label.replace(/^[^\w\s]+/, "").trim(); // جلب النص
+
   return (
-    <div
-      id="skills"
-      data-aos="fade-down"
-      style={{ width: "80%", margin: "8rem auto" }}
-    >
+    <div id="skills" style={{ width: "90%", margin: "8rem auto" }} data-aos="fade-up">
       <TitleSection title="My Skills" />
-      <div className="skills-container">
-        <img
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-          src={html}
-          alt=""
-        />
-        <img
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="300"
-          data-aos-offset="0"
-          src={css}
-          alt=""
-        />
-        <img
-          data-aos="fade-left"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-          src={js}
-          alt=""
-        />
+
+      <div className="custom-tabs">
+        {tabs.map((tab) => (
+  <button
+    key={tab.id}
+    onClick={() => setActiveTab(tab.id)}
+    className={`custom-tab-button ${activeTab === tab.id ? "active" : ""}`}
+  >
+    <motion.span
+      animate={activeTab === tab.id ? { rotate: [0, 10, -10, 0] } : {}}
+      transition={{ duration: 0.5 }}
+      style={{ display: "inline-block", marginRight: "0.5rem" }}
+    >
+      {getIcon(tab.label)}
+    </motion.span>
+    {getText(tab.label)}
+  </button>
+))}
       </div>
-      <div className="skills-container">
-        <img
-          data-aos="fade-left"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-          src={bootstrap}
-          alt=""
-        />
-        <img
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="300"
-          data-aos-offset="0"
-          src={tailwind}
-          alt=""
-        />
-        <img
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-          src={react}
-          alt=""
-        />
-      </div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab}
+          className="custom-skills-grid"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+        >
+          {skillsData[activeTab].map((skill, index) => (
+            <div
+              key={index}
+              className="custom-skill-card"
+              style={{
+                background: "linear-gradient(180deg, rgba(21, 185, 185, 0.15), rgba(60, 29, 255, 0.15))",
+              }}
+            >
+              {skill}
+            </div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
