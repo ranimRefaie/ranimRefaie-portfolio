@@ -14,13 +14,13 @@ const skillsData = {
   frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Next.js", "TypeScript"],
   ui: ["Tailwind CSS", "Bootstrap", "CSS Modules"],
   tools: ["Git", "GitHub", "GitLab", "VS Code", "Figma"],
-  other: ["Responsive Design", "API Integration", "Context API / Zustand", "React Hooks"],
+  other: ["Responsive Design", "API Integration", "Context API", "React Hooks"],
 };
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState("frontend");
-  const getIcon = (label) => label.match(/^[^\w\s]+/)[0]; // جلب الإيموجي
-const getText = (label) => label.replace(/^[^\w\s]+/, "").trim(); // جلب النص
+  const getIcon = (label) => label.match(/^[^\w\s]+/)[0]; 
+  const getText = (label) => label.replace(/^[^\w\s]+/, "").trim();
 
   return (
     <div id="skills" style={{ width: "90%", margin: "8rem auto" }} data-aos="fade-up">
@@ -28,21 +28,21 @@ const getText = (label) => label.replace(/^[^\w\s]+/, "").trim(); // جلب ال
 
       <div className="custom-tabs">
         {tabs.map((tab) => (
-  <button
-    key={tab.id}
-    onClick={() => setActiveTab(tab.id)}
-    className={`custom-tab-button ${activeTab === tab.id ? "active" : ""}`}
-  >
-    <motion.span
-      animate={activeTab === tab.id ? { rotate: [0, 10, -10, 0] } : {}}
-      transition={{ duration: 0.5 }}
-      style={{ display: "inline-block", marginRight: "0.5rem" }}
-    >
-      {getIcon(tab.label)}
-    </motion.span>
-    {getText(tab.label)}
-  </button>
-))}
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`custom-tab-button ${activeTab === tab.id ? "active" : ""}`}
+          >
+            <motion.span
+              animate={activeTab === tab.id ? { rotate: [0, 10, -10, 0] } : {}}
+              transition={{ duration: 0.5 }}
+              style={{ display: "inline-block", marginRight: "0.5rem" }}
+            >
+              {getIcon(tab.label)}
+            </motion.span>
+            {getText(tab.label)}
+          </button>
+        ))}
       </div>
 
       <AnimatePresence mode="wait">
