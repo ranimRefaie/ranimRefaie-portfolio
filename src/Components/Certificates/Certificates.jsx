@@ -33,20 +33,24 @@ const Certificates = () => {
     {
       id: 1,
       company: "Focal X Agency",
-      year: "2023",
+      year: "Jul 2023 – Nov 2023",
       certificate: "https://ranimrefaie.github.io/ranimRefaie-portfolio/certificate-1.jpg",
       attachmentLabel: "Recommendation Letter",
-      attachment: "https://ranimrefaie.github.io/ranimRefaie-portfolio/recommendation-letter.jpg",
+      attachment: "https://ranimrefaie.github.io/ranimRefaie-portfolio/recommendation.jpg",
       desc: "I completed a 4-month internship at Focal X Agency, where I gained experience in HTML, CSS, JavaScript, React.js, Bootstrap, APIs, and GitHub. I also improved my teamwork and communication skills by working closely with a team.",
     },
     {
       id: 2,
-      company: "Syrian Scientific Society for Informatics",
-      year: "2023",
+      company: "VICA Web Solution",
+      year: "Nov 2023 – Jan 2024",
       certificate: "https://ranimrefaie.github.io/ranimRefaie-portfolio/certificate-2.webp",
       attachmentLabel: "Online Profile",
       attachment: "https://vica.website/training/trainees/725165",
-      desc: "I completed a 60-hour Full Stack course at the Syrian Scientific Society for Informatics covering HTML, CSS, JavaScript, ASP.NET, and SQL Server. My portfolio and profile were featured on their website.",
+      desc: ` During my training, I completed a full-stack course with a focus on front-end development. I learned and applied:
+              HTML, CSS, Bootstrap, Tailwind,
+              JavaScript (ES6+), jQuery,
+              API Integration, Git & GitHub,
+              React (Basics & Hooks), Intro to Next.js. I built small projects and practiced responsive design and team collaboration.`,
     },
   ];
 
@@ -70,11 +74,11 @@ const Certificates = () => {
             <Card.Body>
               <Card.Title className="card-title">{item.company} ({item.year})</Card.Title>
               <Card.Text className="card-text" style={{ color: theme.color }}>{item.desc}</Card.Text>
-              <div style={{ marginBottom: "0.5rem",textAlign:'center' }}>
+              <div style={{ marginBottom: "0.5rem", textAlign: 'center' }}>
                 📜 <a href={item.certificate} target="_blank" rel="noreferrer">View Certificate</a>
               </div>
               {item.attachment && (
-                <div style={{ textAlign:'center'}}>
+                <div style={{ textAlign: 'center' }}>
                   📎 <a href={item.attachment} target="_blank" rel="noreferrer">{item.attachmentLabel}</a>
                 </div>
               )}
