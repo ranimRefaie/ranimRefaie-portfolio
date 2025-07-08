@@ -1,8 +1,5 @@
 import "./Certificates.css";
 import Card from "react-bootstrap/Card";
-import certificate_1 from "../../assets/certificate-1.jpg";
-import certificate_2 from "../../assets/certificate-2.jpg";
-import ButtonDownload from "../ButtonDownload/ButtonDownload";
 import TitleSection from "../TitleSection/TitleSection";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,7 +9,8 @@ import { ThemeContext } from "../../Contexts/Themes";
 
 const Certificates = () => {
   const [{ theme }] = useContext(ThemeContext);
-  var settings = {
+
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -30,69 +28,56 @@ const Certificates = () => {
       },
     ],
   };
+
   const Data = [
     {
       id: 1,
-      img: certificate_1,
-      title: "Front End Training Certificate",
-      desc: "During a 4-month training period at Focal x agency Company, I gained valuable experience in Front-end development using various technologies such as HTML, CSS, JavaScript, React.js, and Bootstrap. Additionally, I learned how to work with APIs and interact with GitHub to effectively manage projects. Collaborating within the team was a valuable experience where I learned how to communicate and cooperate with others to successfully achieve project goals.",
-      link: "https://ranimrefaie.github.io/ranimRefaie-portfolio/certificate-1.jpg",
-      nameLink: "certificate-1.jpg",
+      company: "Focal X Agency",
+      year: "2023",
+      certificate: "https://ranimrefaie.github.io/ranimRefaie-portfolio/certificate-1.jpg",
+      attachmentLabel: "Recommendation Letter",
+      attachment: "https://ranimrefaie.github.io/ranimRefaie-portfolio/recommendation-letter.jpg",
+      desc: "I completed a 4-month internship at Focal X Agency, where I gained experience in HTML, CSS, JavaScript, React.js, Bootstrap, APIs, and GitHub. I also improved my teamwork and communication skills by working closely with a team.",
     },
     {
       id: 2,
-      img: certificate_2,
-      title: "Certificate Of Attendance",
-      desc: " A certificate of attendance and successful completion of a 60-hour training course provided by the Syrian Scientific Society for Informatics for Full Stack developers, which includes HTML5, CSS, JavaScript, ASP.NET, and SQL Server.",
-      link: "https://ranimrefaie.github.io/ranimRefaie-portfolio/certificate-2.jpg",
-      nameLink: "certificate-2.jpg",
+      company: "Syrian Scientific Society for Informatics",
+      year: "2023",
+      certificate: "https://ranimrefaie.github.io/ranimRefaie-portfolio/certificate-2.webp",
+      attachmentLabel: "Online Profile",
+      attachment: "https://vica.website/training/trainees/725165",
+      desc: "I completed a 60-hour Full Stack course at the Syrian Scientific Society for Informatics covering HTML, CSS, JavaScript, ASP.NET, and SQL Server. My portfolio and profile were featured on their website.",
     },
   ];
+
   return (
-    <div
-      id="certificates"
-      className="cards-certificates"
-      style={{
-        width: "85%",
-        margin: "auto",
-      }}
-    >
-      <TitleSection title="Certificate" />
+    <div id="certificates" className="cards-certificates" style={{ width: "85%", margin: "auto" }}>
+      <TitleSection title="Certificates & Training" />
       <Slider {...settings} className="slide-certif">
         {Data.map((item) => (
           <Card
             key={item.id}
-            style={{
-              margin: "auto",
-              width: "75%",
-              padding: "0.55rem",
-              flexDirection: "row",
-            }}
+            className="card"
+            style={{ marginBottom: "2rem", flexDirection: "row", padding: "1rem", background: "transparent", border: "1px solid #1f93ca", borderRadius: "10px" }}
           >
-            <Card.Img
-              variant="top"
-              src={item.img}
-              style={{
-                border: "2px solid rgba(60, 29, 255, 0.2)",
-                borderRadius: "20px",
-                width: "18rem",
-                margin: "auto",
-              }}
-            />
-            <Card.Body>
-              <Card.Title>{item.title}</Card.Title>
-              <Card.Text
-                style={{
-                  color: theme.color,
-                }}
-              >
-                {item.desc}
-              </Card.Text>
-              <ButtonDownload
-                text=" Download"
-                link={item.link}
-                name={item.nameLink}
+            <a href={item.certificate} target="_blank" rel="noreferrer">
+              <Card.Img
+                variant="top"
+                src={item.certificate}
+                style={{ border: "2px solid rgba(60, 29, 255, 0.2)", borderRadius: "20px", width: "18rem", margin: "auto" }}
               />
+            </a>
+            <Card.Body>
+              <Card.Title className="card-title">{item.company} ({item.year})</Card.Title>
+              <Card.Text className="card-text" style={{ color: theme.color }}>{item.desc}</Card.Text>
+              <div style={{ marginBottom: "0.5rem",textAlign:'center' }}>
+                📜 <a href={item.certificate} target="_blank" rel="noreferrer">View Certificate</a>
+              </div>
+              {item.attachment && (
+                <div style={{ textAlign:'center'}}>
+                  📎 <a href={item.attachment} target="_blank" rel="noreferrer">{item.attachmentLabel}</a>
+                </div>
+              )}
             </Card.Body>
           </Card>
         ))}
