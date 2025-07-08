@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useContext } from "react";
 import { ThemeContext } from "../../Contexts/Themes";
+import { FaLink } from "react-icons/fa6";
 
 const Certificates = () => {
   const [{ theme }] = useContext(ThemeContext);
@@ -79,7 +80,7 @@ const Certificates = () => {
               </div>
               {item.attachment && (
                 <div style={{ textAlign: 'center' }}>
-                  📎 <a href={item.attachment} target="_blank" rel="noreferrer">{item.attachmentLabel}</a>
+                  <FaLink size={20} style={{color:'#f093b6', marginRight:'3px'}}/><a href={item.attachment} target="_blank" rel="noreferrer">{item.attachmentLabel}</a>
                 </div>
               )}
             </Card.Body>
