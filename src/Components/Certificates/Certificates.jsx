@@ -33,17 +33,17 @@ const Certificates = () => {
     {
       id: 1,
       company: "Focal X Agency",
-      year: "Jul 2023 – Nov 2023",
-      certificate: "https://ranimrefaie.github.io/ranimRefaie-portfolio/certificate-1.jpg",
+      year: "Jul 2023 - Nov 2023",
+      certificate: "/certificate-1.jpg",
       attachmentLabel: "Recommendation Letter",
-      attachment: "https://ranimrefaie.github.io/ranimRefaie-portfolio/recommendation.jpg",
+      attachment: "/recommendation.jpg",
       desc: "I completed a 4-month internship at Focal X Agency, where I gained experience in HTML, CSS, JavaScript, React.js, Bootstrap, APIs, and GitHub. I also improved my teamwork and communication skills by working closely with a team.",
     },
     {
       id: 2,
       company: "VICA Web Solution",
-      year: "Nov 2023 – Jan 2024",
-      certificate: "https://ranimrefaie.github.io/ranimRefaie-portfolio/certificate-2.webp",
+      year: "Nov 2023 - Jan 2024",
+      certificate: "certificate-2.webp",
       attachmentLabel: "Online Profile",
       attachment: "https://vica.website/training/trainees/725165",
       desc: ` During my training, I completed a full-stack course with a focus on front-end development. I learned and applied:
