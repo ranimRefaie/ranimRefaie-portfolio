@@ -9,22 +9,22 @@ import pro_8 from '../assets/electronic-store.jpeg'
 import pro_9 from '../assets/DenTist.jpeg'
 
 const Data = [
-    {
-        id: 1,
-        img: pro_6,
-        title: 'Learner',
-        desc: 'Responsive website using HTML5,CSS3,JavaScript and Bootsrap',
-        demo: 'https://ranimrefaie.github.io/Task4-2',
-        git: 'https://github.com/ranimRefaie/Task4-2',
-    },
-    {
-         id: 2,
-        img: pro_4,
-        title: 'Educational Platform',
-     desc: 'Responsive website, using only html and css',
-        demo: 'https://ranimrefaie.github.io/Task3_2/',
-     git: 'https://github.com/ranimRefaie/Task3_2',
-     },
+    // {
+    //      id: 1,
+    //      img: pro_6,
+    //      title: 'Learner',
+    //      desc: 'Responsive website using HTML5,CSS3,JavaScript and Bootsrap',
+    //      demo: 'https://ranimrefaie.github.io/Task4-2',
+    //     git: 'https://github.com/ranimRefaie/Task4-2',
+    // },
+    // {
+    //      id: 2,
+    //     img: pro_4,
+    //     title: 'Educational Platform',
+    //  desc: 'Responsive website, using only html and css',
+    //     demo: 'https://ranimrefaie.github.io/Task3_2/',
+    //  git: 'https://github.com/ranimRefaie/Task3_2',
+    //  },
      {
         id: 3,
         img: pro_9,
@@ -49,14 +49,14 @@ const Data = [
         demo: 'https://ranimrefaie.github.io/B-World',
         git: 'https://github.com/ranimRefaie/B-World',
     },
-    {
-        id: 6,
-        img: pro_5,
-        title: 'Travel',
-        desc: 'Responsive website using React js',
-        demo: 'https://ranimrefaie.github.io/Travel/',
-        git: 'https://github.com/ranimRefaie/Travel',
-    },
+    // {
+    //     id: 6,
+    //     img: pro_5,
+    //     title: 'Travel',
+    //     desc: 'Responsive website using React js',
+    //     demo: 'https://ranimrefaie.github.io/Travel/',
+    //     git: 'https://github.com/ranimRefaie/Travel',
+    // },
     
     {
         id: 7,
@@ -67,7 +67,7 @@ const Data = [
         git: 'https://github.com/ranimRefaie/Best-Food',
     },    
     {
-        id: 8,
+        id: 6,
         img: pro_7,
         title: 'Movies App',
         desc: 'A movie browsing app built with Next.js, TypeScript and Tailwind CSS, using the TMDB API to display and search for movies.',
@@ -75,7 +75,7 @@ const Data = [
         git: 'https://github.com/ranimRefaie/movies',
     },
     {
-        id: 9,
+        id: 8,
         img: pro_8,
         title: 'ShoppingGo',
         desc: 'A responsive e-commerce website built with React and Next.js.',

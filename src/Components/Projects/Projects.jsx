@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ButtonShow from "../ButtonShow/ButtonShow";
 
-const Projects = ({ showAll = false }) => {
+const Projects = ({ showAll = true }) => {
   AOS.init({
     easing: "ease-out-quart",
     delay: 0,
@@ -49,7 +49,7 @@ const Projects = ({ showAll = false }) => {
 
       {!showAll && (
         <div className="btn-show-projects">
-          <ButtonShow title="Show All Projects" link="/projects" />
+          {/* <ButtonShow title="Show All Projects" link="/projects" /> */}
         </div>
       )}
     </div>
